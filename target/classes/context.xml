@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.softwarecafe.iocPackage"/>
+
+
+    <!-- bean definitions here -->
+<!--    ioc Package bean declaration start form here  -->
+    <bean id="car" class="com.softwarecafe.iocPackage.Car">
+<!--        <property name="" value=""/>-->
+    </bean>
+    <bean id="bike" class="com.softwarecafe.iocPackage.Bike">
+        <property name="model" value="livo 2016"/>
+        <property name="brand" value="Hond"/>
+    </bean>
+    <bean id="tempo" class="com.softwarecafe.iocPackage.Tempo">
+        <constructor-arg name="brand" value="bajaj" />
+        <constructor-arg name="type" value="3 wheeler"/>
+    </bean>
+    <bean id="address" class="com.softwarecafe.iocPackage.Address">
+        <constructor-arg name="houseno" value="4/67 "/>
+        <constructor-arg name="locality" value="daulatpur"/>
+        <constructor-arg name="pincode" value="221002"/>
+    </bean>
+    <bean id="employee" class="com.softwarecafe.iocPackage.Employee">
+        <constructor-arg name="id" value="emp101"/>
+        <constructor-arg name="name" value="Saroj sinha"/>
+        <constructor-arg name="address" >
+            <ref bean="address"/>
+        </constructor-arg>
+    </bean>
+    <bean id="qus" class="com.softwarecafe.iocPackage.Question">
+        <constructor-arg name="id" value="1" type="int"/>
+        <constructor-arg name="name" value="What is java"/>
+        <constructor-arg name="answers">
+            <list>
+                <value> java is programming Language</value>
+                <value> java is object oriented</value>
+                <value> java is moduler</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean id="ans1" class="com.softwarecafe.iocPackage.Answer">
+        <constructor-arg value="1"/>
+        <constructor-arg value="Spring is java framework whic provide '\n' look coupling and high cohesion"/>
+        <constructor-arg value="alok"/>
+    </bean>
+
+    <bean id="ans2" class="com.softwarecafe.iocPackage.Answer">
+        <constructor-arg value="2"/>
+        <constructor-arg value="It hava various module which makes the task easy"/>
+        <constructor-arg value="Ravi"/>
+    </bean>
+    <bean id="qus2" class="com.softwarecafe.iocPackage.Question2">
+        <constructor-arg name="id" value="2" type="int"/>
+        <constructor-arg name="name" value="What are the feature of Spring"/>
+        <constructor-arg name="answers">
+            <list>
+                <ref bean="ans1"/>
+                <ref bean="ans2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean id="answer1" class="com.softwarecafe.iocPackage.Answer3">
+        <constructor-arg value="1"/>
+        <constructor-arg value="Java is a Programming Language"/>
+        <constructor-arg value="12/12/2001"/>
+    </bean>
+    <bean id="answer2" class="com.softwarecafe.iocPackage.Answer3">
+        <constructor-arg value="2"/>
+        <constructor-arg value="Java is a platform"/>
+        <constructor-arg value="12/12/2003"/>
+    </bean>
+    <bean id="user1" class="com.softwarecafe.iocPackage.User">
+        <constructor-arg value="1"/>
+        <constructor-arg value="Arun Kumar"/>
+        <constructor-arg value="arun@gmail.com"/>
+    </bean>
+    <bean id="user2" class="com.softwarecafe.iocPackage.User">
+        <constructor-arg value="2"/>
+        <constructor-arg value="Varun Kumar"/>
+        <constructor-arg value="Varun@gmail.com"/>
+    </bean>
+    <bean id="q" class="com.softwarecafe.iocPackage.Question3">
+        <constructor-arg value="1"/>
+        <constructor-arg value="What is Java?"/>
+        <constructor-arg>
+            <map>
+                <entry key-ref="answer1" value-ref="user1"/>
+                <entry key-ref="answer2" value-ref="user2"/>
+            </map>
+        </constructor-arg>
+    </bean>
+    <bean id="e1" class="com.softwarecafe.iocPackage.Employee">
+        <constructor-arg value="101"/>
+        <constructor-arg  value="Sachin"/>
+    </bean>
+
+    <bean id="address1" class="com.softwarecafe.iocPackage.Address">
+        <constructor-arg value="21,Lohianagar"/>
+        <constructor-arg value="Ghaziabad UP"/>
+        <constructor-arg value="300072"/>
+
+    </bean>
+
+    <bean id="e2" class="com.softwarecafe.iocPackage.Employee" parent="e1">
+        <constructor-arg ref="address1"/>
+    </bean>
+    <bean id="stu" class="com.softwarecafe.iocPackage.Student">
+        <property name="rollno">
+            <value>std11001</value>
+        </property>
+        <property name="name">
+            <value>shashank singh</value>
+        </property>
+        <property name="course">
+            <value>BCA</value>
+        </property>
+    </bean>
+    <bean id="iic" class="com.softwarecafe.iocPackage.IICCell">
+        <property name="id" value="iic01"/>
+        <property name="motiv" value="regarding new idea generation"/>
+        <property name="member" ref="stu"/>
+    </bean>
+<!--    In case of byName autowiring mode, bean id and reference name must be same.
+
+It internally uses setter injection.
+
+In case of byType autowiring mode, bean id and reference name may be different. But there must be only one bean of a type.
+-->
+
+    <bean id="b" class="com.softwarecafe.iocPackage.B"/>
+    <bean id="a" class="com.softwarecafe.iocPackage.A" autowire="byName"/>
+<!--    ioc Package Bean decleration end here  -->
+
+</beans>

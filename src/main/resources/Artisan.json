@@ -1,0 +1,31 @@
+[
+  {
+
+  "_class"  :  "com.softwarecafe.jpaProjections.model.Artisan",
+  "name"    :  "Saumya",
+  "dept"    :  "ADMIN",
+  "salary"  :   3000
+  },
+  {
+
+    "_class"  :  "com.softwarecafe.jpaProjections.model.Artisan",
+    "name"    :  "Alok",
+    "dept"    :  "IT",
+    "salary"  :   5000
+  },
+  {
+
+    "_class"  :  "com.softwarecafe.jpaProjections.model.Artisan",
+    "name"    :  "Ravi",
+    "dept"    :  "SALE",
+    "salary"  :   3000
+  },
+  {
+
+    "_class"  :  "com.softwarecafe.jpaProjections.model.Artisan",
+    "name"    :  "Reshama",
+    "dept"    :  "HR",
+    "salary"  :   2500
+  }
+
+]

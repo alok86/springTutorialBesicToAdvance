@@ -1,0 +1,44 @@
+[
+  {
+    "_class": "com.softwarecafe.jpaProjections.model.Staff",
+    "name"    :  "Saumya",
+    "dept"    :  "ADMIN",
+    "salary"  :   3000,
+    "phone"   : "9807564132"
+  },
+  {
+    "_class": "com.softwarecafe.jpaProjections.model.Staff",
+    "name"    :  "Alok",
+    "dept"    :  "IT",
+    "salary"  :   5000,
+    "phone"   : "9807050102"
+  },
+  {
+    "_class": "com.softwarecafe.jpaProjections.model.Staff",
+    "name"    :  "ASHUTOSH",
+    "dept"    :  "SALE",
+    "salary"  :   2500,
+    "phone"   : "9807553214"
+  },
+  {
+    "_class": "com.softwarecafe.jpaProjections.model.Staff",
+    "name"    :  "ANSHIKA",
+    "dept"    :  "HR",
+    "salary"  :   2500,
+    "phone"   : "9807564132"
+  },
+  {
+    "_class": "com.softwarecafe.jpaProjections.model.Staff",
+    "name"    :  "NAYANTARA",
+    "dept"    :  "ADMIN",
+    "salary"  :   3000,
+    "phone"   : "9807554422"
+  },
+  {
+    "_class": "com.softwarecafe.jpaProjections.model.Staff",
+    "name"    :  "AKRITY",
+    "dept"    :  "IT",
+    "salary"  :   5000,
+    "phone"   : "9807652415"
+  }
+]

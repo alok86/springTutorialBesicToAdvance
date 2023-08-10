@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+        <class>com.softwarecafe.ormDAOinJPA.model.Person</class>
+        <class>com.softwarecafe.ormtwo.PersonNew</class>
+        <class>com.softwarecafe.springDataJpaEnablingTransactions.model.Worker</class>
+        <class>com.softwarecafe.jpaProjections.model.Artisan</class>
+        <class>com.softwarecafe.jpaProjections.model.Artisandpt</class>
+        <class>com.softwarecafe.jpaProjections.model.Department</class>
+        <class>com.softwarecafe.jpaProjections.model.Staff</class>
+        <class>com.softwarecafe.jpaProcedureAnnotation.model.Person</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/database1"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="Alok@1986"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="example-unit" transaction-type="RESOURCE_LOCAL">
+        <class>com.softwarecafe.ormDAOinJPA.model.Person</class>
+        <class>com.softwarecafe.ormtwo.PersonNew</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/database1"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="Alok@1986"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="db2-unit" transaction-type="RESOURCE_LOCAL">
+        <class>com.softwarecafe.ormDAOinJPA.model.Person</class>
+        <class>com.softwarecafe.ormtwo.PersonNew</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/database2"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="Alok@1986"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="example2-unit" transaction-type="RESOURCE_LOCAL">
+
+    </persistence-unit>
+</persistence>

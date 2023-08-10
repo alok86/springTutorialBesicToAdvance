@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="e4739b4d-f0db-4cd8-955e-7ef4e81ab989" name="database1" url="jdbc:mysql://localhost:3306/database1" driverClass="com.mysql.cj.jdbc.Driver" />
+    </data-sources>
+    <data-source-infos>
+      <data-source-info id="e4739b4d-f0db-4cd8-955e-7ef4e81ab989" persistence-unit-name="creater-table" />
+    </data-source-infos>
+  </component>
+</project>
